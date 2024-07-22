@@ -1,9 +1,18 @@
 import isProduction from "./isProduction";
 
+const API_LOCAL_URL = "http://localhost:8002/api";
+const API_PROD_URL = "https://mfdp-api-martynov-dm.amvera.io/api";
+
 const getApiUrl = () => {
-  return isProduction
-    ? import.meta.env.VITE_API_PROD_URL
-    : import.meta.env.VITE_API_LOCAL_URL;
+  console.log("isProduction", isProduction);
+
+  console.log(import.meta.env.PROD);
+
+  console.log(import.meta.env.MODE);
+
+  console.log(import.meta.env.BASE_URL);
+
+  return isProduction ? API_PROD_URL : API_LOCAL_URL;
 };
 
 export default getApiUrl;
