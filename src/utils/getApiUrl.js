@@ -6,11 +6,6 @@ const API_PROD_URL = "https://mfdp-api-martynov-dm.amvera.io/api";
 const getApiUrl = () => {
   console.log("isProduction", isProduction);
 
-  console.log(import.meta.env.PROD);
-
-  console.log(import.meta.env.MODE);
-
-  console.log(import.meta.env.BASE_URL);
 
   return isProduction ? API_PROD_URL : API_LOCAL_URL;
 };
