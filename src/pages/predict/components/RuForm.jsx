@@ -22,7 +22,6 @@ const RuForm = ({ setPredictedPrice }) => {
   const {
     handleSubmit,
     register,
-    reset,
     formState: { errors },
   } = useForm();
   const formBgColor = useColorModeValue("gray.50", "gray.700");
