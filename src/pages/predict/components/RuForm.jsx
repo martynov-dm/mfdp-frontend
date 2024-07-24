@@ -33,7 +33,6 @@ const RuForm = ({ setPredictedPrice }) => {
     try {
       const resp = await predictService.predictRu(JSON.stringify(data));
       setPredictedPrice(resp.data.predicted_price);
-      reset();
     } catch (error) {
       console.error("Error predicting price:", error);
     } finally {
